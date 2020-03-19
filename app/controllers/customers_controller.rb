@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CustomersController < ApplicationController
   def index
     @customers = Customer.all
@@ -7,4 +9,7 @@ class CustomersController < ApplicationController
     @customers = Customer.order(:full_name)
   end
 
+  def missing_email
+    @customers = Customer.where(email_address: [nil, ''])
+  end
 end
