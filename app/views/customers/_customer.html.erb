@@ -1,11 +1,12 @@
-<div class="column">
+<div class="column is-3">
   <div class="card">
     <div class="card-content">
-      <p class="title"><%= customer.full_name %></p>
+      <p class="title is-5"><%= customer.full_name %></p>
       <% if customer.image.present? %>
         <%= image_tag customer.image %>
       <% end %>
       <p><%= customer.phone_number%></p>
       <p><%= customer.email_address%></p>
     </div>
+  </div>
 </div>
